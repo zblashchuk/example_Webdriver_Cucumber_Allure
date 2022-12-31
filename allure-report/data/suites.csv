@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Dec 31 18:30:34 EET 2022","Sat Dec 31 18:30:37 EET 2022","2154","","Search on site webdriver.io","","Search on site webdriver.io","As a user, I can click on search and type text","As a user, I can click on search and type text",""
