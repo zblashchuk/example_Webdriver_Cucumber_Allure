@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#docsearch-input\"}\n  (Session info: chrome=108.0.5359.125)",
+  "stacktrace": "Backtrace:\n\t(No symbol) [0x00CDF243]\n\t(No symbol) [0x00C67FD1]\n\t(No symbol) [0x00B5D04D]\n\t(No symbol) [0x00B8C0B0]\n\t(No symbol) [0x00B8C22B]\n\t(No symbol) [0x00BBE612]\n\t(No symbol) [0x00BA85D4]\n\t(No symbol) [0x00BBC9EB]\n\t(No symbol) [0x00BA8386]\n\t(No symbol) [0x00B8163C]\n\t(No symbol) [0x00B8269D]\n\tGetHandleVerifier [0x00F79A22+2655074]\n\tGetHandleVerifier [0x00F6CA24+2601828]\n\tGetHandleVerifier [0x00D88C0A+619850]\n\tGetHandleVerifier [0x00D87830+614768]\n\t(No symbol) [0x00C705FC]\n\t(No symbol) [0x00C75968]\n\t(No symbol) [0x00C75A55]\n\t(No symbol) [0x00C8051B]\n\tBaseThreadInitThunk [0x765300F9+25]\n\tRtlGetAppContainerNamedObjectPath [0x76FB7BBE+286]\n\tRtlGetAppContainerNamedObjectPath [0x76FB7B8E+238]\n"
+}
