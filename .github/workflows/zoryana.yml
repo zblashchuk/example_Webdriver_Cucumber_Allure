@@ -15,10 +15,10 @@ steps:
 - run: npm ci
 # - run: npm config set script-shell &quot;C:\Program Files\Git\bin\bash.exe&quot;
 - name: run test
-run: npm run test:headless # Our name of the headless script
+  run: npm run test:headless # Our name of the headless script
 - name: Copy History
-if: always()
-run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
+  if: always()
+  run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
 - name: Generate Report
 if: always()
 run: npm run allure:generate # Name of the allure generate script
