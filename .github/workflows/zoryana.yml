@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04 # Choosing OS
     strategy:
       matrix:
-        node-version: '17.9.0' # In command line run “node -v” and choose your version
+        node-version: '17.9.0'; # In command line run “node -v” and choose your version
 - run: npm ci
 # - run: npm config set script-shell &quot;C:\Program Files\Git\bin\bash.exe&quot;
   
