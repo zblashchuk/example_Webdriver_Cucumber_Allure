@@ -28,7 +28,7 @@ jobs:
       run: npm run test:headless
     - name: Create Report
       if: always()
-      trying to save history of previous runs if it is exists
+      #trying to save history of previous runs if it is exists
       run: cp -r $(pwd)/allure-report/history/. $(pwd)/allure-results/history || true && npm run allure:generate
     - name: Upload artifact allure-report
       uses: actions/upload-artifact@v1
