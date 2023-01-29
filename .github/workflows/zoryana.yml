@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04 # Choosing OS
     strategy:
       matrix:
-        node-version: [14.17.0]
+        node-version: [17.9.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
     - uses: actions/checkout@v2
@@ -25,27 +25,11 @@ jobs:
     - run: npm i
     - name: run test
       # trying to run tests
-      run: npm run test
-    - name: Copy backupHistory
-      if: always()
-      # trying to save history screens and info of previous runs if it is exists
-      run: cp -r $(pwd)/docs/backupHistory/. $(pwd)/allure-results
+      run: npm run test:headless
     - name: Create Report
       if: always()
-      # trying to save history of previous runs if it is exists
-      run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history || true && npm run allure:generate
-    - name: Create bacup directory
-      if: always()
-      # trying to create backup directory
-      run: mkdir allure-report/backupHistory 
-    - name: Backup history tests
-      if: always()
-      # trying to backup screens and info test
-      run: cp -r $(pwd)/allure-results/*.* $(pwd)/allure-report/backupHistory
-    - name: Display structure of backup history files
-      if: always()
-      run: ls -R
-      working-directory: allure-report/backupHistory
+      trying to save history of previous runs if it is exists
+      run: cp -r $(pwd)/allure-report/history/. $(pwd)/allure-results/history || true && npm run allure:generate
     - name: Upload artifact allure-report
       uses: actions/upload-artifact@v1
       if: always()
