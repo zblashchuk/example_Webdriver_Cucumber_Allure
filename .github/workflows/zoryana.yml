@@ -2,14 +2,14 @@ name: Main Github Actions
 on:
   workflow_dispatch:
 push:
-branches:
-- 'main' # (main branch) Set branch of the GH repo to push      
+  branches:
+    - 'main' # (main branch) Set branch of the GH repo to push      
 jobs:
-test_suite: # Name of the job
-runs-on: ubuntu-20.04 # Choosing OS
-steps:
-- uses: actions/checkout@v3
-- uses: actions/setup-node@v3
+  test_suite: # Name of the job
+  runs-on: ubuntu-20.04 # Choosing OS
+  steps:
+  - uses: actions/checkout@v3
+  - uses: actions/setup-node@v3
    # with:
       #node-version: 17; # In command line run “node -v” and choose your version
 - run: npm ci
