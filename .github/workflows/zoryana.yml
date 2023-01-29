@@ -10,19 +10,10 @@ jobs:
     runs-on: ubuntu-20.04 # Choosing OS
     strategy:
       matrix:
-        node-version: [17.9.0]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-      # trying to install npm packages
-    - run: npm i -g npm@latest
-    - run: npm i npm@latest
-    - run: npm i
+        node-version: '17.9.0' # In command line run “node -v” and choose your version
+- run: npm ci
+# - run: npm config set script-shell &quot;C:\Program Files\Git\bin\bash.exe&quot;
+  
     - name: run test
       # trying to run tests
       run: npm run test:headless
